@@ -1,0 +1,6 @@
+label {
+    color: green;
+}
+label.checked {
+    color: gray;
+}
