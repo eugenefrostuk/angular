@@ -17,7 +17,13 @@
 
     <div ng-controller="CustomCtrl as todolist">
         <h1>Todo</h1>
-        <p>1 of 2 remaining</p>
+
+        <p>
+            <span>{{todolist.getCheckedTodosNumber()}}</span>
+            <span>of {{todolist.todos.length}} remaining</span>
+        </p>
+
+        <button ng-click="todolist.removeTodos()">remove</button>
         
         <!--'ng-repeat' = 'each' -->
         <div ng-repeat="todo in todolist.todos">

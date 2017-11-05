@@ -17,4 +17,18 @@ angular.module('angular', [])
                 self.todoname = '';
             }
         }
+
+        self.removeTodos = function() {
+            var uncheckedTodos = self.todos.filter(function(item) {
+                return item.checked === false;
+            });
+            self.todos = uncheckedTodos;
+        }
+
+        self.getCheckedTodosNumber = function() {
+            var checkedTodos = self.todos.filter(function(item) {
+                return item.checked === true;
+            });
+            return checkedTodos.length;
+        }
     });
